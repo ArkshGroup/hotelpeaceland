@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Consistent layout – use across all pages and components */
+@layer components {
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-pad {
+    @apply py-12 md:py-16;
+  }
+  .section-pad-lg {
+    @apply py-16 lg:py-20;
+  }
+  /* Top offset for fixed navbar (use on first content section if no hero) */
+  .page-offset {
+    @apply pt-20;
+  }
+}
