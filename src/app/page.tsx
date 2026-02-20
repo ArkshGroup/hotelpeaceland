@@ -1,7 +1,6 @@
 "use client";
 
 import Hero from "./components/Hero";
-import Contact from "./components/Contact";
 import Accordion, { AccordionItem } from "./components/FAQAccordian";
 import FeaturedAmenities from "./components/Features";
 import Rooms from "./components/RoomSection";
@@ -10,6 +9,7 @@ import BookingBar from "./components/BookingBar";
 import { FaQuestion } from "react-icons/fa";
 import NewHero from "./components/NewHero";
 import { ContentCard } from "./components/ContentCard";
+import AboutSection from "./components/AboutSection";
 
 const faqItems: AccordionItem[] = [
   {
@@ -49,7 +49,7 @@ export default function Home() {
       <Hero />
       <BookingBar />
       <Rooms />
-      <Contact />
+      <AboutSection/>
       <NewHero />
       <FeaturedAmenities />
       <div className="bg-gray-50 section-pad">
