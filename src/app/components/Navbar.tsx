@@ -24,8 +24,8 @@ export default function Navbar() {
       isGradientParent: true,
       dropdown: [
         { label: "Standard Double Room", href: "/rooms/standardDouble" },
-        { label: "Standard Twin Room", href: "/rooms/standardTriple" },
-        { label: "Standard Triple Room", href: "/rooms/standardTwin" },
+        { label: "Standard Twin Room", href: "/rooms/standardTwin" },
+        { label: "Standard Triple Room", href: "/rooms/standardTriple" },
       ],
     },
     { label: "Nearby Attractions", href: "/attractions" },
@@ -83,7 +83,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center gap-2 text-[10px] xl:text-sm font-bold text-[#333333]">
+          <ul className="hidden lg:flex items-center gap-2 text-[10px] xl:text-sm font-normal text-[#333333]">
             {navLinks.map((link) =>
               link.dropdown ? (
                 <li key={link.label} className="relative group py-4">
@@ -158,7 +158,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-6 space-y-4 font-bold shadow-2xl">
+          <div className="lg:hidden bg-white px-6 py-6 space-y-4 font-bold shadow-2xl">
             {navLinks.map((link) => (
               <div key={link.label}>
                 {link.dropdown ? (
@@ -170,7 +170,7 @@ export default function Navbar() {
                           : setRestaurantOpen(!restaurantOpen)
                       }
                       className={`flex justify-between items-center w-full py-2.5 px-4 rounded-md
-                        ${link.isGradientParent ? "border-2 border-gradient-from-to text-gray-800" : "text-gray-800"}`}
+                        ${link.isGradientParent ? " text-gray-800" : "text-gray-800"}`}
                     >
                       <span>{link.label}</span>
                       <HiChevronDown

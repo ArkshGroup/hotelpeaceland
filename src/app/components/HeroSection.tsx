@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 interface heroProps{
@@ -22,8 +23,8 @@ const HeroSection = ({ title, list1, list2 ,list3 }: heroProps) => {
         </h1>
 
         <nav className="flex items-center justify-center flex-wrap gap-x-2 text-white mt-4 text-sm">
-          <span className='text-sm'>{list1} ›</span>
-          <span className="font-bold text-sm">{list2}</span>
+          <Link href={list1.toLowerCase()==='home'?'/':'/home'} className='text-sm'>{list1} ›</Link>
+          <Link href={list2.toLowerCase()==='rooms'?'/rooms':'/'} className="font-bold text-sm">{list2}</Link>
           {list3?<span className='font-bold text-sm'>› {list3}</span>:''}
         </nav>
       </div>
